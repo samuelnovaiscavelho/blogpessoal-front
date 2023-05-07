@@ -1414,7 +1414,7 @@ react-transition-group@^4.4.0, react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react-use-localstorage@3.5.3:
+react-use-localstorage@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/react-use-localstorage/-/react-use-localstorage-3.5.3.tgz#c4bcc097859a2d2879e969f0a57b16345905df82"
   integrity sha512-1oNvJmo72G4v5P9ytJZZTb6ywD3UzWBiainTtfbNlb+U08hc+SOD5HqgiLTKUF0MxGcIR9JSnZGmBttNLXaQYA==
@@ -1534,6 +1534,11 @@ update-browserslist-db@^1.0.10:
   dependencies:
     escalade "^3.1.1"
     picocolors "^1.0.0"
+
+use-local-storage-state@^18.3.2:
+  version "18.3.2"
+  resolved "https://registry.yarnpkg.com/use-local-storage-state/-/use-local-storage-state-18.3.2.tgz#807dfca86a7364efde997892812b01fc53993dd2"
+  integrity sha512-JiTuQsJmmKvc0mH0hiSjaTkKFlwtwXTeOlJ+cdg7rRJzZWwv+s/Rr2S2r2NR68O0W5ogwwt1MX1y+P2wQ1lY4w==
 
 vanilla-swipe@^2.4.1:
   version "2.4.1"
