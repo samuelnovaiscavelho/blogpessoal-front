@@ -1,0 +1,29 @@
+.textoLogin{
+    font-weight: bold !important;
+    color:#339097 !important;
+    
+}
+.textoLogin:hover{
+    font-weight: bold !important;
+    color:#285864 !important;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.imagemLogin {
+    background-image: url(https://i.imgur.com/Zd2M41T.png);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.botaoLogar {
+    background-color: #08aabe !important;
+}
+
+.botaoLogar:hover {
+    background-color: #07bcd4  !important;
+
+}

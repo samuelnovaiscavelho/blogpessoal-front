@@ -1,0 +1,54 @@
+.divDoPerfil {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.cardDoPerfil {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aqua;
+    
+}
+
+.cardDoPerfil img {
+    width: 30%;
+    object-fit: cover;
+    aspect-ratio: 3/2;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.areaCard{
+    margin: 10px!important;
+    display: flex;
+    padding-right: 20px!important;
+}
+
+.backgroundPerfil1{
+    background-image: url('https://i.imgur.com/gESSQVG.jpg');
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gridPerfil{
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.textoCard{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+    padding: 0 .5rem;
+}
