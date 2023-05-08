@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokenReducer";
 import { addToken } from "../../../store/tokens/Action";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -25,6 +25,12 @@ function Navbar() {
     (state) => state.token
   );
 
+  // Toast, info
+  const displayLoginNotification = () => {
+    toast.info("Too many attempts. Login in 30 minutes!");
+  };
+
+
   const [hidden, setHidden] = React.useState(false)
 
   const [anchorElPostagem, setAnchorElPostagem] = React.useState<null | HTMLElement>(null);
@@ -32,7 +38,7 @@ function Navbar() {
   const handleClickPostagem = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElPostagem(event.currentTarget);
   };
-  const handleClosePostagem= () => {
+  const handleClosePostagem = () => {
     setAnchorElPostagem(null);
   };
 
@@ -41,7 +47,7 @@ function Navbar() {
   const handleClickTema = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElTema(event.currentTarget);
   };
-  const handleCloseTema= () => {
+  const handleCloseTema = () => {
     setAnchorElTema(null);
   };
 
@@ -81,7 +87,7 @@ function Navbar() {
               </Box>
             </Link>
             <div hidden={hidden}>
-            <Box display="flex" justifyContent="center" alignItems={"center"}>
+              <Box display="flex" justifyContent="center" alignItems={"center"}>
                 <Box mx={1} style={{ cursor: "pointer" }}>
                   <Button
                     id="demo-positioned-button"
@@ -89,7 +95,7 @@ function Navbar() {
                     aria-haspopup="true"
                     aria-expanded={openPostagem ? 'true' : undefined}
                     onClick={handleClickPostagem}
-                    style={{textTransform: "none"}}
+                    style={{ textTransform: "none" }}
                   >
                     <Typography variant="h6" color="#ffff">
                       Categorias
@@ -111,7 +117,7 @@ function Navbar() {
                       horizontal: 'right',
                     }}
                   >
-                    <MenuItem onClick={handleClosePostagem} style={{display: "block", paddingBottom: "1vh"}}>
+                    <MenuItem onClick={handleClosePostagem} style={{ display: "block", paddingBottom: "1vh" }}>
                       <Link to="/postagens">
                         <Box mx={1} style={{ cursor: "pointer" }}>
                           <Typography variant="body1" color="#000000">
@@ -120,7 +126,7 @@ function Navbar() {
                         </Box>
                       </Link>
                     </MenuItem>
-                    <MenuItem onClick={handleClosePostagem} style={{display: "block"}}>
+                    <MenuItem onClick={handleClosePostagem} style={{ display: "block" }}>
                       <Link to="/cadastropostagem">
                         <Box mx={1} style={{ cursor: "pointer" }}>
                           <Typography variant="body1" color="#000000">
@@ -131,7 +137,7 @@ function Navbar() {
                     </MenuItem>
                   </Menu>
                 </Box>
-            
+
 
                 <Box mx={1} style={{ cursor: "pointer" }}>
                   <Button
@@ -140,7 +146,7 @@ function Navbar() {
                     aria-haspopup="true"
                     aria-expanded={openTema ? 'true' : undefined}
                     onClick={handleClickTema}
-                    style={{textTransform: "none"}}
+                    style={{ textTransform: "none" }}
                   >
                     <Typography variant="h6" color="#ffff">
                       Temas
@@ -162,7 +168,7 @@ function Navbar() {
                       horizontal: 'right',
                     }}
                   >
-                    <MenuItem onClick={handleCloseTema} style={{display: "block", paddingBottom: "1vh"}}>
+                    <MenuItem onClick={handleCloseTema} style={{ display: "block", paddingBottom: "1vh" }}>
                       <Link to="/temas">
                         <Box mx={1} style={{ cursor: "pointer" }}>
                           <Typography variant="body1" color="#000000">
@@ -171,7 +177,7 @@ function Navbar() {
                         </Box>
                       </Link>
                     </MenuItem>
-                    <MenuItem onClick={handleCloseTema} style={{display: "block"}}>
+                    <MenuItem onClick={handleCloseTema} style={{ display: "block" }}>
                       <Link to="/cadastrartema">
                         <Box mx={1} style={{ cursor: "pointer" }}>
                           <Typography variant="body1" color="#000000">
@@ -182,21 +188,21 @@ function Navbar() {
                     </MenuItem>
                   </Menu>
                 </Box>
-              <Link to="/perfil">
-                <Box mx={1} style={{ cursor: "pointer" }}>
+                <Link to="/perfil">
+                  <Box mx={1} style={{ cursor: "pointer" }}>
+                    <Typography variant="h6" color="#ffff">
+                      Perfil
+                    </Typography>
+                  </Box>
+                </Link>
+                <Box mx={1} style={{ cursor: 'pointer' }} onClick={logout}>
                   <Typography variant="h6" color="#ffff">
-                    Perfil
+                    Logout
                   </Typography>
                 </Box>
-              </Link>
-              <Box mx={1} style={{ cursor: 'pointer' }} onClick={logout}>
-                <Typography variant="h6" color="#ffff">
-                  Logout
-                </Typography>
               </Box>
-            </Box>
             </div>
-            
+
           </Box>
         </Toolbar>
       </AppBar>
