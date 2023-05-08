@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import React from 'react'
 import { Box } from '@mui/material';
 
-function Footer() {
+function footerComponent() {
     return (
     <>
         <Grid
@@ -65,4 +65,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default footerComponent;

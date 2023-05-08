@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { useEffect } from "react";
 import useState from 'react';
 
-function Navbar() {
+function navbarComponent() {
 
   const history = useNavigate()
 
@@ -209,4 +209,4 @@ function Navbar() {
     </>
   );
 }
-export default Navbar;
+export default navbarComponent;
